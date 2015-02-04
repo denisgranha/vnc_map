@@ -29,7 +29,7 @@ angular.module('vivirnacoruna.controllers', [])
                     //console.log($scope.eventos[index]);
                     //$state.go("tab.evento-detail",{eventoId:$scope.eventos[index].ID});
                     //$location.path($scope.eventos[index].guid );
-                    window.open($scope.eventos[index].guid);
+                    window.open("http://vivirnacoruna.es/?p="+$scope.eventos[index].ID);
                     //alert($scope.eventos[index].guid);
                 }
             });
