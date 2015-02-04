@@ -1,0 +1,22 @@
+{
+  "name": "vnc_map",
+  "version": "1.0.0",
+  "homepage": "https://github.com/denisgranha/vnc_map",
+  "authors": [
+    "Denís Graña <denisgranha@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.12",
+    "angular-bootstrap": "~0.12.0"
+  }
+}

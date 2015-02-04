@@ -1,0 +1,21 @@
+/* Empty. Add your own CSS if you like */
+.angular-google-map,
+.angular-google-map-container {
+    height: 100vh;
+    /*
+    height: 400px;*/
+
+}
+
+.labels {
+    color: indianred;
+    background-color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.padding-top{
+    padding-top: 10%;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mapa Vivir na Coruña</title>
+
+
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+      <script src="bower_components/angularjs/angular.js"></script>
+    <!-- vendor libs -->
+      <script src="lib/lodash/dist/lodash.js"></script>
+      <script src="lib/angular-google-maps/dist/angular-google-maps.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+      <!--<script src="js/angular-locale_es-es.js"></script>-->
+      <script src="js/angular-locale_gl.js"></script>
+  </head>
+  <body ng-app="vivirnacoruna">
+    <div class="container" ng-controller="EventsCtrl">
+        <div class="div-wrapper">
+          <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+              <ui-gmap-markers
+                      models='filtrados'
+                      idKey="'ID'"
+                      coords="'coords'"
+                      options="'options'"
+                      click="'open'"
+                      >
+              </ui-gmap-markers>
+          </ui-gmap-google-map>
+        </div>
+
+        <div class="list">
+
+
+          <div class="button-bar item">
+
+              <button class="button" ng-class="prices[selected_price].class" ng-click="changue_price()"> {{prices[selected_price].name}}</button>
+          </div>
+
+        </div>
+
+    </div>
+
+  </body>
+</html>
