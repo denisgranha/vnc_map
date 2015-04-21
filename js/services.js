@@ -5,7 +5,14 @@ angular.module('vivirnacoruna.services', [])
     return {
         today: function(callback){
 
-            var url = $rootScope.backend + '/today';
+            var start = new Date();
+            start.setHours(0,0,0,0);
+            start = start.getTime()*1000;
+
+            var end = new Date();
+            end.setHours(23,59,59);
+            end = end.getTime()*1000;
+            var url = $rootScope.backend + '/interval/'+start+'/'+end;
 
             $http.get(url).success(callback);
         },
@@ -23,20 +30,10 @@ angular.module('vivirnacoruna.services', [])
             $http.get(url).success(callback);
         },
 
-        search: function(query,callback){
-            var url = $rootScope.backend + '/search/'+query;
+        places: function(){
+            var url = $rootScope.backend + '/places';
 
-            $http.get(url).success(callback);
-        },
-        prices: function(callback){
-            var url = $rootScope.backend + '/prices';
-
-            $http.get(url).success(callback);
-        },
-        categories: function(callback){
-            var url = $rootScope.backend + '/categories';
-
-            $http.get(url).success(callback);
+            return $http.get(url);
         }
 
     }

@@ -28,24 +28,14 @@
         <div class="div-wrapper">
           <ui-gmap-google-map center='map.center' zoom='map.zoom'>
               <ui-gmap-markers
-                      models='filtrados'
-                      idKey="'ID'"
+                      models='places'
+                      idKey="'name'"
                       coords="'coords'"
                       options="'options'"
                       click="'open'"
                       >
               </ui-gmap-markers>
           </ui-gmap-google-map>
-        </div>
-
-        <div class="list">
-
-
-          <div class="button-bar item">
-
-              <button class="button" ng-class="prices[selected_price].class" ng-click="changue_price()"> {{prices[selected_price].name}}</button>
-          </div>
-
         </div>
 
     </div>
